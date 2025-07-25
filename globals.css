@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 60% 97%; /* Light grayish-blue */
+    --foreground: 220 25% 40%;
+
+    --card: 220 60% 97%;
+    --card-foreground: 220 25% 40%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 5% 10%;
+
+    --primary: 220 90% 60%; /* Primary blue for icons/text */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 80% 95%;
+    --secondary-foreground: 260 20% 10%;
+
+    --muted: 240 5% 90%;
+    --muted-foreground: 240 5% 40%;
+
+    --accent: 260 80% 90%;
+    --accent-foreground: 260 20% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 10% 90%;
+    --input: 220 10% 90%;
+    --ring: 220 90% 60%;
+
+    --radius: 1.5rem;
+    
+    --active-nav: 35 92% 55%;
+  }
+
+  .dark {
+    --background: 220 25% 10%;
+    --foreground: 220 60% 97%;
+    --card: 220 25% 15%;
+    --card-foreground: 220 60% 97%;
+    --popover: 220 25% 10%;
+    --popover-foreground: 220 60% 97%;
+    --primary: 220 90% 60%;
+    --primary-foreground: 220 25% 10%;
+    --secondary: 260 80% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 5% 20%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 260 80% 25%;
+    --accent-foreground: 0 0% 98%;
+    --border: 240 5% 25%;
+    --input: 240 5% 20%;
+    
+    --active-nav: 35 92% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+    .soft-shadow {
+        box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
+    }
+    .soft-shadow-inset {
+        box-shadow: inset 8px 8px 16px #d1d9e6, inset -8px -8px 16px #ffffff;
+    }
+    .soft-shadow-press {
+      transition: all 0.1s ease-in-out;
+    }
+    .soft-shadow-press:active {
+      box-shadow: inset 4px 4px 8px #d1d9e6, inset -4px -4px 8px #ffffff;
+    }
+
+    .group-hover-scale-105 {
+      transition: transform 0.2s ease-in-out;
+    }
+    .group-hover-scale-105:hover {
+      transform: scale(1.05);
+    }
+}
